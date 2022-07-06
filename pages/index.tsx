@@ -6,6 +6,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Header from '../components/Header'
 import NotificationBar from '../components/Notifications'
 import EventCarousel from '../components/Events'
+import TrendingNow from '../components/Trending'
 
 const Home: NextPage = () => {
   const theme = createTheme({
@@ -37,6 +38,7 @@ const Home: NextPage = () => {
       <Header theme={theme}/>
       <NotificationBar theme={theme} />
       <EventCarousel theme={theme} />
+      <TrendingNow theme={theme} />
 
     </ThemeProvider>
   )

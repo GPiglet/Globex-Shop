@@ -1,7 +1,3 @@
-
-
-
-
 import * as React from 'react';
 import Carousel from 'react-material-ui-carousel'
 import { styled, alpha } from '@mui/material/styles';

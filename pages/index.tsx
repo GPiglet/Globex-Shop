@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Header from '../components/Header'
 import NotificationBar from '../components/Notifications'
+import EventCarousel from '../components/Events'
 
 const Home: NextPage = () => {
   const theme = createTheme({
@@ -35,6 +36,7 @@ const Home: NextPage = () => {
 
       <Header theme={theme}/>
       <NotificationBar theme={theme} />
+      <EventCarousel theme={theme} />
 
     </ThemeProvider>
   )

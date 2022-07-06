@@ -87,13 +87,13 @@ const ResponsiveHeader = (props: any) => {
     {
       if ( window.pageYOffset > 0 )
       {
-        stickyHeader.current.style.backgroundColor = '#fff';
-        stickyHeader.current.style.marginTop = 0;
+        // stickyHeader.current.style.backgroundColor = '#fff';
+        // stickyHeader.current.style.marginTop = 0;
       }
       else
       {
-        stickyHeader.current.style.backgroundColor = 'transparent';
-        stickyHeader.current.style.marginTop = '11px';
+        // stickyHeader.current.style.backgroundColor = 'transparent';
+        // stickyHeader.current.style.marginTop = '11px';
       }
     }
   }

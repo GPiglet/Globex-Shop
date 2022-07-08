@@ -7,6 +7,7 @@ import Header from '../components/Header'
 import NotificationBar from '../components/Notifications'
 import EventCarousel from '../components/Events'
 import TrendingNow from '../components/Trending'
+import DealsOfDay from '../components/Deals'
 
 const Home: NextPage = () => {
   const theme = createTheme({
@@ -51,6 +52,7 @@ const Home: NextPage = () => {
       <NotificationBar theme={theme} />
       <EventCarousel theme={theme} />
       <TrendingNow theme={theme} />
+      <DealsOfDay theme={theme} />
 
     </ThemeProvider>
   )

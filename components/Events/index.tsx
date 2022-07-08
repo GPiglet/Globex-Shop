@@ -74,6 +74,9 @@ const EventCarousel = (props: any) => {
             <Slider {...setting}>
                 <CarouselItem />
                 <CarouselItem />
+                <CarouselItem />
+                <CarouselItem />
+                <CarouselItem />
             </Slider>
         </Container>
     </Box>

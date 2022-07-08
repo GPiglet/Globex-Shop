@@ -48,15 +48,9 @@ const PrevArrow = (props: any) => {
   )
 }
 
-const TrendingNow = (props: any) => {
+const DealsOfDay = (props: any) => {
   const products = [
-    {
-      title: 'Womens Denim Jacket',
-      image: '/images/product1.png',
-      rate: 4.4,
-      price: 1000,
-      discount: 0.3,
-    },
+    
 
     {
       title: 'Womens Denim Jacket',
@@ -69,6 +63,14 @@ const TrendingNow = (props: any) => {
     {
       title: 'Womens Denim Jacket',
       image: '/images/product3.jpg',
+      rate: 4.4,
+      price: 1000,
+      discount: 0.3,
+    },
+
+    {
+      title: 'Womens Denim Jacket',
+      image: '/images/product1.png',
       rate: 4.4,
       price: 1000,
       discount: 0.3,
@@ -129,7 +131,7 @@ const TrendingNow = (props: any) => {
     >
       <CssBaseline />
       <Container maxWidth="xl" >
-        <Typography variant="h4">Trending Now</Typography>
+        <Typography variant="h4">Deals of the Day</Typography>
         <Slider {...setting}>
           {products.map((product, index) => {
             return (
@@ -146,29 +148,22 @@ const TrendingNow = (props: any) => {
                   alt="green iguana"
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {product.title}
+                  <Box
+                    sx={{
+                        width: '30%',
+                        ml: 'auto',
+                        mr: 'auto',
+                        mb: 2,
+                    }}
+                    component="img"
+                    src="/images/levis.svg"
+                  />
+                  <Typography gutterBottom variant="h5" textAlign={'center'} component="div">
+                    Best of Styles
                   </Typography>
-                  <Stack direction="row" spacing={2}>
-                    <Typography variant="body2">
-                      Brand Name
-                    </Typography>
-                    <Typography variant="body2">
-                      4.4
-                    </Typography>
-                    <StarIcon fontSize='small' sx={{color: '#848484'}}/>
-                  </Stack>
-                  <Stack direction="row" spacing={2} sx={{mt: 2}} alignItems='center'>
-                    <Typography variant="h6">
-                      Rs. {product.price * (1 - product.discount)}
-                    </Typography>
-                    <Typography variant="body2" sx={{textDecoration: 'line-through'}}>
-                      Rs. {product.price}
-                    </Typography>
-                    <Typography variant="body2" sx={{color: '#0A8200'}}>
-                      ({product.discount * 100}% off)
-                    </Typography>
-                  </Stack>
+                  <Typography gutterBottom variant="body2" textAlign={'center'} component="div">
+                    Under Rs. {product.price}
+                  </Typography>
                 </CardContent>
                 {/* <CardActions>
                   <Button size="small">Share</Button>
@@ -186,4 +181,4 @@ const TrendingNow = (props: any) => {
     </Box>
   );
 };
-export default TrendingNow;
+export default DealsOfDay;

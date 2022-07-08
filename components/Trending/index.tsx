@@ -22,7 +22,8 @@ const NextArrow = (props: any) => {
         position: 'absolute',
         top: '45%',
         right: 0,
-        background: 'rgba(0, 0, 0, 0.05)'
+        background: 'rgba(39, 39, 39, 0.8)',
+        color: '#fff'
       }}
     >
       <NavigateNextIcon />
@@ -38,7 +39,8 @@ const PrevArrow = (props: any) => {
         top: '45%',
         left: 0,
         zIndex: 1,
-        background: 'rgba(0, 0, 0, 0.05)'
+        background: 'rgba(39, 39, 39, 0.8)',
+        color: '#fff'
       }}
     >
       <NavigateBeforeIcon />
@@ -151,8 +153,12 @@ const TrendingNow = (props: any) => {
         <Slider {...setting}>
           {products.map((product, index) => {
             return (
-              <Box sx={{p: 2}}>
-              <Card key={index} sx={{  }}>
+              <Box key={index} sx={{p: 2}}>
+              <Card
+                sx={{
+                  borderRadius: 2,
+                }}
+              >
                 <CardMedia
                   component="img"
                   height="300"

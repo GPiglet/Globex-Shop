@@ -1,20 +1,21 @@
 import * as React from 'react';
-import Carousel from 'react-material-ui-carousel'
 import { styled, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
+import Grid from '@mui/material/Grid';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
 
 const CarouselItem = () => {
     return (
         <Box>
             <Grid container>
-                <Grid item xs={6.43}>
+                <Grid item xs={12} sm={6} md={6.43}>
                     <Box
                     sx={{
                         width: '100%'
@@ -24,15 +25,31 @@ const CarouselItem = () => {
                     src="/images/event-prada.jpg"
                     />
                 </Grid>
-                <Grid item xs={5.57} >
+                <Grid item xs={12} sm={6} md={5.57} 
+                  sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundImage: 'url(/images/event-prada-background.png)'
+                  }}
+                >
+                  <Stack spacing={{xs: 1, md: 2}} alignItems="center" sx={{m: {xs: 4, sm: 0}}}>
                     <Box
-                    sx={{
-                        width: '100%'
-                    }}
-                    component="img"
-                    alt="PRADA"
-                    src="/images/event-prada-background.png"
+                      sx={{mb: {xs: 1, md: 4}, width: '80%'}}
+                      component="img"
+                      alt="PRADA"
+                      src="/images/prada.svg"
                     />
+                    <Typography variant="h4" color={'#565656'}>
+                      Big Fashion Festival
+                    </Typography>
+                    <Typography variant="h4" color={'#565656'}>
+                      50% - 80% off
+                    </Typography>
+                    <Button variant="outlined" sx={{textTransform: 'none', pl: 6, pr: 6}}>
+                      Explore
+                    </Button>
+                  </Stack>
                 </Grid>
             </Grid>
         </Box>
@@ -40,15 +57,24 @@ const CarouselItem = () => {
 }
 
 const EventCarousel = (props: any) => {
+  const setting = {
+      dots: true,
+      arrows: false,
+      infinite: true,
+      swipeToSlide: true,
+    };
   return (
     <Box
+      sx = {{
+        mb: 8,
+      }}
     >
         <CssBaseline />
         <Container maxWidth="xl" disableGutters>
-            <Carousel animation="slide">
+            <Slider {...setting}>
                 <CarouselItem />
                 <CarouselItem />
-            </Carousel>
+            </Slider>
         </Container>
     </Box>
   );

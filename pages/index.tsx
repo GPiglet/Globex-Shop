@@ -15,8 +15,9 @@ const Home: NextPage = () => {
         'Libre Baskerville',
         'Arial',
         'sans-serif'
-      ].join(',')
+      ].join(','),
     },
+
     palette: {
       primary: {
         main: '#272727',
@@ -26,6 +27,17 @@ const Home: NextPage = () => {
       // }
     },
   });
+
+  theme.typography.h4 = {
+    fontSize: '1.8rem',
+    fontWeight: 400,
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.6rem',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: '2.125rem',
+    },
+  };
 
   return (
     <ThemeProvider theme={theme}>

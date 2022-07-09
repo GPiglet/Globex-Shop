@@ -62,6 +62,9 @@ const EventCarousel = (props: any) => {
       arrows: false,
       infinite: true,
       swipeToSlide: true,
+      speed: 1000,
+      autoPlay: true,
+      autoplaySpeed: 2000,
     };
   return (
     <Box

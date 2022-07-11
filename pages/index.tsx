@@ -9,6 +9,7 @@ import EventCarousel from '../components/Events'
 import TrendingNow from '../components/Trending'
 import DealsOfDay from '../components/Deals'
 import EventProduct from '../components/Events/EventProduct'
+import Categories from '../components/Categories'
 
 const Home: NextPage = () => {
   const theme = createTheme({
@@ -55,6 +56,7 @@ const Home: NextPage = () => {
       <TrendingNow theme={theme} />
       <DealsOfDay theme={theme} />
       <EventProduct theme={theme} />
+      <Categories theme={theme} />
     </ThemeProvider>
   )
 }

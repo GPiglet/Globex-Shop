@@ -8,6 +8,7 @@ import NotificationBar from '../components/Notifications'
 import EventCarousel from '../components/Events'
 import TrendingNow from '../components/Trending'
 import DealsOfDay from '../components/Deals'
+import EventProduct from '../components/Events/EventProduct'
 
 const Home: NextPage = () => {
   const theme = createTheme({
@@ -23,9 +24,9 @@ const Home: NextPage = () => {
       primary: {
         main: '#272727',
       },
-      // secondary: {
-        // main: '#EAA34D',
-      // }
+      secondary: {
+        main: '#fff',
+      }
     },
   });
 
@@ -53,7 +54,7 @@ const Home: NextPage = () => {
       <EventCarousel theme={theme} />
       <TrendingNow theme={theme} />
       <DealsOfDay theme={theme} />
-
+      <EventProduct theme={theme} />
     </ThemeProvider>
   )
 }
